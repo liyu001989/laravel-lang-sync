@@ -1,0 +1,19 @@
+{
+    "name": "liyu/laravel-lang-sync",
+    "description": "a command line tool to sync language file for Laravel 5",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yu Li",
+            "email": "liyu001989@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "authload": {
+        "psr-4": {
+            "Liyu\\LaravelLangSync\\": "src/"
+        }
+    }
+}

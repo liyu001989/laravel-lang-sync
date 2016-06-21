@@ -1,3 +1,4 @@
 # Laravel Lang Sync
 
-just test
+It is a command line tool to sync lang file
+

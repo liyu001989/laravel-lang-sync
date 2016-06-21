@@ -4,7 +4,7 @@ namespace Liyu\LaravelLangSync;
 
 use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends ServiceProvider
+class LaravelServiceProvider extends ServiceProvider
 {
 
     public function register()

@@ -11,9 +11,9 @@
     "require": {
         "php": ">=5.5.0"
     },
-    "authload": {
+    "autoload": {
         "psr-4": {
-            "Liyu\\LaravelLangSync\\": "src/"
+            "Liyu\\LaravelLangSync\\": "src"
         }
     }
 }

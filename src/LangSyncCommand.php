@@ -35,11 +35,12 @@ class LangSyncCommand extends Command
     private function check()
     {
         // check source dir
-        if (!$source = $this->argument('source')) {
+        if (! $source = $this->argument('source')) {
             $source = $this->ask('source dir in resources/lang/');
 
-            if (!is_dir(base_path('resources/lang/').$source)) {
+            if (! is_dir(base_path('resources/lang/').$source)) {
                 $this->error("you don't have resources/lang/{$source} dir");
+
                 return false;
             }
 
@@ -47,11 +48,12 @@ class LangSyncCommand extends Command
         }
 
         // check target dir
-        if (!$target = $this->argument('target')) {
+        if (! $target = $this->argument('target')) {
             $target = $this->ask('target dir in resources/lang/');
 
-            if (!is_dir(base_path('resources/lang/').$target)) {
+            if (! is_dir(base_path('resources/lang/').$target)) {
                 $this->error("you don't have resources/lang/{$target} dir");
+
                 return false;
             }
 
@@ -68,7 +70,7 @@ class LangSyncCommand extends Command
      */
     public function handle()
     {
-        if (!$this->check()) {
+        if (! $this->check()) {
             return;
         }
 
@@ -79,7 +81,7 @@ class LangSyncCommand extends Command
         $dir = opendir($sourcePath);
 
         // 计算文件个数
-        $fileNum = sizeof(scandir($sourcePath));
+        $fileNum = count(scandir($sourcePath));
         $fileNum = $fileNum > 2 ? $fileNum - 2 : 0;
         $bar = $this->output->createProgressBar($fileNum);
 
